@@ -1,0 +1,27 @@
+<h3>Simple interest calculator</h3>
+<div><span>Interest Rate: </span>{{interest}}%</div>
+<div><span>Principal: </span>{{principal}}</div>
+<div><span>Period: </span>{{period}} years</div>
+<div><span>TOTAL: </span>{{total}} (Interest: {{total - principal}})</div>
+
+<br>
+<span>Input here</span>
+<form (ngSubmit)="onSubmit()" #simpleForm="ngForm">
+	<div class="form-group">
+		<label for="name">Interest Rate</label>
+		<input type="text" class="form-control" id="interest" required [(ngModel)]="interest" name="interest">
+	</div>
+
+	<div class="form-group">
+		<label for="alterEgo">Principal</label>
+		<input type="text" class="form-control" id="principal" required="" [(ngModel)]="principal" name="principal">
+	</div>
+
+	<div class="form-group">
+		<label for="alterEgo">Period</label>
+		<input type="text" class="form-control" id="period" required="" [(ngModel)]="period" name="period">
+	</div>
+
+	<button type="submit" class="btn btn-success">Submit</button>
+
+</form>
